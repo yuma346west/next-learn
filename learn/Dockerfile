@@ -3,8 +3,8 @@ FROM node:lts
 COPY ./app /learn
 WORKDIR /learn
 
-RUN yarn add
+RUN yarn install
 
-EXPOSE 8080
+EXPOSE 3000
 
 CMD ["yarn", "dev"]
