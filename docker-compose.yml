@@ -1,11 +1,12 @@
 version: "3"
 
 services:
-  learn:
+  front:
     container_name: app
-    build: learn
+    build: front
     volumes:
-      - ./learn/app:/app
+      - ./front/app:/app:cached
+      - /app/node_modules
     tty: true
     ports:
       - "3000:3000"

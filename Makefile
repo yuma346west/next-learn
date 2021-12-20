@@ -1,8 +1,12 @@
 run:
-	docker-compose up -d learn
+	docker-compose up -d front
 down:
 	docker-compose down
-login-js:
-	docker exec -it app /bin/bash
 ps:
 	docker ps
+
+# [front]
+build-front:
+	docker-compose build --no-cache front
+login-front:
+	docker exec -it app /bin/bash
